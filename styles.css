@@ -1,0 +1,286 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /*the root change for easy conversion to responsive metrics*/
+html {
+    font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+    -webkit-text-size-adjust: none; /* for iOS Safari */
+  text-size-adjust: none; /* for other mobile browsers */
+  }
+  
+  @media (prefers-reduced-motion: no-preference) { /*smooth scrolling */
+    html {
+          scroll-behavior: smooth;
+    }
+  }
+
+
+
+
+  p {
+    font-size: 18px;
+    
+  }
+  
+  li {
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  #logo {
+    margin: 0 0 0 .45em;
+    width: 25rem;
+  }
+  
+  #logo, #mainnav {
+    list-style: none;
+  }
+
+  #mainnav  {
+    display: flex;
+  }
+
+  #mainnav a {
+    font-family: DM Serif Display, serif;
+    font-size: 2rem;
+    display: block;
+    padding: 1em;
+    align-items: center;
+  }
+
+  #mainbar  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3C1518;
+    height: 25rem;
+  }
+  
+/* media queries */
+
+@media only screen and (max-width: 990px) {
+  #mainbar {
+    flex-direction: column;
+    height: 35rem;
+  }
+  
+  #logo {
+  margin: 0;
+}
+  
+  #mainnav  {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+
+/* mobile screen queries */
+@media only screen and (max-width: 470px) {
+ 
+  #logo {
+    margin: .25em 0;
+    align-self: left; /* align the logo to the left side of its container */
+}
+  
+  #mainnav {
+    flex-direction: column;
+  }
+  
+  #mainnav a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+  
+  #mainnav li:last-of-type a {
+    border-bottom: none;
+  }
+
+  #mainbar {
+    height: 45rem;
+  }
+
+}
+/*end of queries for menu */
+
+#join {
+        background-color: #52B788;
+        border: none;
+        color: white;
+        padding: 3rem 6rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+
+.banner-container {
+    height: 50rem;
+    background-image: url(./banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*media queries*/
+@media only screen and (max-width: 450px) {
+  .banner-container {
+    background-position: center;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+
+}
+/*end of media queries for banner */
+
+h1 {
+  color: #3C1518;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 10rem;
+  text-align: center;
+}
+
+#tagline {
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+/*media queries*/
+
+@media only screen and (min-width: 451px) and (max-width: 900px) {
+
+  h1 {
+    font-size: 5rem;
+  }
+  
+  #tagline {
+    height: 15rem;
+  }
+
+}
+
+@media only screen and (max-width: 450px){
+
+  h1 {
+    font-size: 2rem;
+  }
+  
+  #tagline {
+    height: 10rem;
+  }
+
+}
+
+/*end of media queries for tagline */
+
+.flex-container {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.event {
+  width: 30rem;
+  margin: 1rem 1rem;
+}
+
+.event img {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+h2 {
+  color: #3C1518;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+h3 {
+  color: white;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  background-color: #3C1518;
+  margin-top: 5%;
+}
+
+/*media queries*/
+
+@media only screen and (min-width: 451px) and (max-width: 900px) {
+
+  h3 {
+    font-size: 3rem;
+  }
+
+}
+
+@media only screen and (max-width: 450px){
+
+  h3 {
+    font-size: 2rem;
+  }
+  
+
+}
+
+/*end of media queries for h3 */
+
+/*gallery*/
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  background-color: #3C1518;
+}
+
+/* four equal columns next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
